@@ -1,0 +1,43 @@
+$maxWidth: 1920; // максимальная ширина страницы
+$minWidth: 320; // минимальная ширина телефона
+$maxWidthContainer: 1236; // ширина контейнера с учетом padding слева и справа
+$containerWidth: 1206; // ширина контейнера из макета
+
+$mainOffset: 15; // отступы безопасности для контейнера
+$mainFont: 'Montserrat'; // !указать здесь основное семейство шрифта
+$mainWeight: 400; // !указать здесь основное начертание шрифта
+
+$headerHeight: 100;
+$footerHeight: 100;
+
+$mainRadius: rem(10);
+
+$whiteColor: #FFFFFF;
+$blackColor: #232323;
+$grayColor: #464646;
+$redColor: #ff4040;
+$colorOrange: #FF9F47;
+$colorBlue: #5192CE;
+$colorDarkBlue: #364A9A;
+
+
+$firstAccentColor: $blackColor;
+$secondAccentColor: $redColor;
+
+$fontFamily: $mainFont, sans-serif; // Семейство шрифта по умолчанию
+$fontColor: $blackColor; // Цвет шрифта по умолчанию
+$fontSize: rem(16); // Размер шрифта по умолчанию
+$fontWeight: $mainWeight; // Жирность шрифта по умолчанию
+
+$standartTrans: all 280ms ease-in-out 0ms;
+
+$btnBoxShadow:  0px 2px 3px rgba(#000, 10%), 
+                0px 8px 3px rgba(#000, 10%);
+
+$lightBoxShadow:  0 0 2px 0 rgba(#000, 10%), 
+                  0 0 4px 0 rgba(#000, 10%), 
+                  0 0 8px 0 rgba(#000, 10%);
+
+$hoverBoxShadow:  0 0 5px 0 rgba(#000, 10%), 
+                  0 0 10px 0 rgba(#000, 10%), 
+                  0 0 15px 0 rgba(#000, 10%);

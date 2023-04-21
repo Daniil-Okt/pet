@@ -1,0 +1,56 @@
+// Заголовки, общие БЄМ блоки и проче...
+h1 {
+    font-weight: 700;
+    @include adaptiveClamp(font-size, 46, 30);
+    @include adaptiveClamp(line-height, 56, 40);
+    color: $whiteColor;
+}
+
+h2 {
+    font-weight: 700;
+    @include adaptiveClamp(font-size, 36, 20);
+    @include adaptiveClamp(line-height, 44, 28);
+}
+
+h3 {
+    font-weight: 700;
+    @include adaptiveClamp(font-size, 24, 18);
+    @include adaptiveClamp(line-height, 29, 23);
+}
+p {
+    @include adaptiveClamp(font-size, 18, 16);
+    @include adaptiveClamp(line-height, 22, 20);
+}
+
+.button {
+    padding: rem(21);
+    max-width: rem(277);
+    width: 100%;
+
+    font-weight: 700;
+    font-size: rem(14);
+    line-height: rem(17);
+
+    color: $whiteColor;
+    background: $colorBlue;
+    border-radius: 50px;
+
+    transition: all 0.3s ease  0s;
+
+    cursor: pointer;
+    &:hover{
+         background: $colorDarkBlue;
+    }
+}
+.button .dark {
+    background: $colorDarkBlue;
+    &:hover {
+        background: $colorBlue;
+    }
+}
+a {
+    transition: all 0.3s ease  0s;
+    &:hover {
+        opacity: 0.8;
+    }
+}
