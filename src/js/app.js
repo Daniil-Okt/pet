@@ -93,3 +93,35 @@ useDynamicAdapt()
 // spollerInit()
 
 // =======================================================================================================
+
+let headerLink = document.querySelectorAll('.menu__item-sub')
+if(headerLink.length > 0){
+  headerLink.forEach(link => {
+    // let linkActive = link.closest('._active')
+    // linkActive.classList.remove('_active')
+    link.addEventListener('click', () => {
+      // headerLink.forEach(linkA => { 
+      //   linkA.classList.remove('_active')
+      // })
+      link.classList.toggle('_active')
+      if (!link.classList.contains('_active')) {
+        link.classList.remove('_active')
+      } else {
+        link.closest('active').classList.remove('_active')
+        link.classList.add('_active')
+      }
+    })
+  });
+}
+
+// ====================
+let body = document.querySelector('.wrapper');
+  window.onscroll = onScroll;
+  function onScroll() {
+    var top = window.pageYOffset;
+    if (top < 60) {
+      body.classList.remove('hide');
+    } else {
+      body.classList.add('hide');
+    }
+  }

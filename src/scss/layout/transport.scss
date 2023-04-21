@@ -1,0 +1,114 @@
+.transport {
+    position: relative;
+    padding: rem(60) 0 rem(27);
+        &::before {
+        position: absolute;
+        content: '';
+       
+        height: rem(400);
+        width: rem(1000);
+        top: 0;
+        right:  50%;
+        // @include adaptiveClamp(margin-left, 40, -5);
+        // transform: translateX(0%);
+        // transform: rotate(-163.37deg);
+        background: url(@img/transport-fon1.png) no-repeat center center / cover;
+        z-index: -1;
+    }
+    &::after {
+        position: absolute;
+        content: '';
+        height: rem(400);
+        width: rem(1000);
+        top: 105px;
+        left: 50%;
+        // transform: translateX(-100%);
+        background: url(@img/transport-fon2.png) no-repeat center center / contain;
+        z-index: -1;
+    }
+
+    &__container {
+    }
+
+    &__row {
+        position: relative;
+        display: flex;
+        // flex-wrap: wrap;
+        margin: 0 rem(-12.5);
+        row-gap: rem(30);
+        @media(max-width:1135px){
+            flex-wrap: wrap;
+        }
+        &::before {
+            position: absolute;
+            content: '';
+            height: rem(153);
+            width: rem(153);
+            bottom: 0;
+            left: -320px;
+            // transform: translateX(-100%);
+            background: url(@img/transport-fon-samlet.png) no-repeat center center / contain;
+            z-index: -1;
+        }
+    }
+
+    &__item {
+        flex: 0 1 25%;
+        padding: 0 rem(12.5);
+        @media(max-width:1135px){
+            flex: 0 1 50%;
+        }
+        @media(max-width:620px){
+            flex: 0 1 100%;
+        }
+    }
+}
+.item-transport {
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100%;
+    }
+
+    &__img {
+        @include adaptiveClamp(margin-bottom, 47, 25);
+        max-width: rem(128);
+        height: rem(128);
+        // height: 100%;
+        // height: 128px;
+        // flex-grow: 1;
+        // flex: 0 1 100%;
+        img {
+            width: 100%;
+        }
+    }
+
+    &__title {
+        margin: 0 auto rem(20);
+        text-align: center;
+        @media(max-width:856px){
+            max-width: rem(300);
+        }
+        @media(max-width:620px){
+            max-width: 100%;
+
+        }
+    }
+
+    &__text {
+        text-align: center;
+        line-height: rem(19.5);
+    }
+    &__button-row {
+        min-width: 100%;
+    }
+    &__button {
+        margin: rem(30) auto rem(0);
+        max-width: rem(211);
+        @media(max-width:1135px){
+            max-width: rem(277);
+        }
+    }
+}

@@ -1,8 +1,8 @@
 // Заголовки, общие БЄМ блоки и проче...
 h1 {
     font-weight: 700;
-    @include adaptiveClamp(font-size, 46, 30);
-    @include adaptiveClamp(line-height, 56, 40);
+    @include adaptiveClamp(font-size, 46, 26);
+    @include adaptiveClamp(line-height, 56, 31);
     color: $whiteColor;
 }
 
@@ -15,7 +15,7 @@ h2 {
 h3 {
     font-weight: 700;
     @include adaptiveClamp(font-size, 24, 18);
-    @include adaptiveClamp(line-height, 29, 23);
+    @include adaptiveClamp(line-height, 29, 22);
 }
 p {
     @include adaptiveClamp(font-size, 18, 16);
@@ -36,6 +36,7 @@ p {
     border-radius: 50px;
 
     transition: all 0.3s ease  0s;
+    text-align: center;
 
     cursor: pointer;
     &:hover{

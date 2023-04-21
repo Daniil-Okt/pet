@@ -1,0 +1,98 @@
+.air {
+    margin-top: rem(-150);
+    &__container {
+    }
+
+    &__row {
+        display: flex;
+        align-items: center;
+        @media(max-width:1120px){
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__body {
+        flex: 0 1 50%;
+        @include adaptiveClamp(margin-left,0, 0);
+        margin-right: rem(18);
+        @media(max-width:1120px){
+            flex: 0 1 100%;
+        }
+    }
+
+    &__title {
+    }
+
+    &__text {
+        @include adaptiveClamp(margin-top, 33, 20);
+    }
+    span {
+        display: block;
+        font-weight: 600;
+        @include adaptiveClamp(margin-bottom, 30, 15);
+
+    }
+    &__list {
+    }
+
+    &__item {
+        span {
+            @include adaptiveClamp(margin-bottom, 0, 0);
+        }
+
+        
+    }
+
+    &__button-row {
+    }
+
+    &__buttom {
+    }
+
+    &__img {
+        margin-top: rem(100);
+        margin-right: rem(-222);
+        flex: 0 1 auto;
+        max-width: rem(774);
+        max-height: rem(541);
+        img {
+            width: 100%;
+            height: 100%;
+            // object-fit: cover;
+        }
+        @media(max-width:1550px){
+            margin-right: 0;
+            flex: 0 1 50%;
+        }
+        @media(max-width:1120px){
+            flex: 0 1 100%;
+        }
+    }
+}
+.document {
+
+    &__body {
+    }
+
+    &__title {
+    }
+
+    &__text {
+    }
+
+    &__list {
+    }
+
+    &__item {
+    }
+
+    &__button-row {
+    }
+
+    &__button {
+    }
+}
+.button {
+}
+.dark {
+}

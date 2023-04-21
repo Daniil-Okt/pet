@@ -5,10 +5,14 @@
   })
   <body>
     <div class="wrapper">
-      @@include('html/header.html', {})
       <main class="page">
+        @@include('html/header.html', {})
+
         <div data-observ></div>
-        
+        @@include('html/beginning.html', {})
+        @@include('html/transport.html', {})
+        @@include('html/document.html', {})
+        @@include('html/air.html', {})
       </main>
       @@include('html/footer.html', {})
     </div>
