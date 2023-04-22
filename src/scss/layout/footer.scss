@@ -75,6 +75,7 @@
 
   &__number {
     @include adaptiveClamp(margin-top, 46, 20);
+    @include adaptiveClamp(font-size, 24, 20);
 
     color: $whiteColor;
     &::before {
@@ -99,7 +100,8 @@
 
   &__button {
     color: $whiteColor;
-
+    padding-bottom: rem(7);
+    border-color: $whiteColor;
   }
   &__title {
     font-weight: 600;
