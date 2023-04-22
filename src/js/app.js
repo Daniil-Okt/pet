@@ -94,22 +94,32 @@ useDynamicAdapt()
 
 // =======================================================================================================
 
-let headerLink = document.querySelectorAll('.menu__item-sub')
+let headerLink = document.querySelectorAll('.menu__btn-str')
+let headerSub = document.querySelectorAll('.menu__item-sub')
 if(headerLink.length > 0){
   headerLink.forEach(link => {
     link.addEventListener('click', () => {
-      link.classList.toggle('_active')
-      
-      if (link.classList.contains('_active')) {
-        link.classList.remove('_active')
-      } else {
-        // link.closest('_active').classList.remove('_active')
-        link.classList.add('_active')
-      }
+      if(!link.parentElement.classList.contains('_active')){
+        if (headerSub.length > 0) {
+          headerSub.forEach(sub => {
+            if(sub.classList.contains('_active')) {
+              sub.classList.remove('_active')
+            }
+          });
+        }
+        link.parentElement.classList.add('_active')
+    } else {
+      link.parentElement.classList.remove('_active')
+    }
     })
   });
 }
 
+// if(link.parentElement.classList.contains('_active')){
+//   link.parentElement.classList.remove('_active')
+// } else {
+//   link.parentElement.classList.add('_active')
+// }
 
 // ====================
 let body = document.querySelector('.wrapper');

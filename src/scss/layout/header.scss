@@ -190,23 +190,24 @@
   }
   &__item-sub {
     position: relative;
+    display: flex;
     .menu__link {
       position: relative;
-      padding-right: rem(18);
-      &::before {
-        position: absolute;
-        content: '';
-        background: url(@img/header-sub-strelka.svg) no-repeat center center / contain;
-        height: rem(12);
-        width: rem(12);
-        top: rem(3);
-        right: 0;
-        cursor: pointer;
-        transition: all 0.3s ease  0s;
-        @media(max-width:960px){
-          top: rem(7);
-        }
-      }
+      padding-right: rem(6);
+      // &::before {
+      //   position: absolute;
+      //   content: '';
+      //   background: url(@img/header-sub-strelka.svg) no-repeat center center / contain;
+      //   height: rem(12);
+      //   width: rem(12);
+      //   top: rem(3);
+      //   right: 0;
+      //   cursor: pointer;
+      //   transition: all 0.3s ease  0s;
+      //   @media(max-width:960px){
+      //     top: rem(7);
+      //   }
+      // }
     }
     
     
@@ -216,6 +217,31 @@
           pointer-events: all;
           opacity: 1;
         }
+        .menu__btn-str {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+  &__btn-str {
+    position: relative;
+    height: rem(12);
+    width: rem(12);
+    top: rem(3);
+    right: 0;
+    cursor: pointer;
+    transition: all 0.3s ease  0s;
+    img {
+      width: 100%;
+    }
+    @media(max-width:960px){
+      height: rem(28);
+      width: rem(30);
+      margin-left: rem(10);
+      top: rem(-5);
+
+      ._active & {
+        transform: rotate(180deg);
       }
     }
   }
@@ -229,9 +255,7 @@
 
     @media(max-width:960px){
       font-size: rem(20);
-      ._active &::before {
-        transform: rotate(180deg);
-      }
+      
     }
     
   }
