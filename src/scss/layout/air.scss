@@ -47,6 +47,9 @@
     }
 
     &__buttom {
+        @media(max-width:410px){
+            margin: 0 auto;
+        }
     }
 
     &__img {

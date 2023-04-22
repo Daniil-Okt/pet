@@ -115,18 +115,12 @@ if(headerLink.length > 0){
   });
 }
 
-// if(link.parentElement.classList.contains('_active')){
-//   link.parentElement.classList.remove('_active')
-// } else {
-//   link.parentElement.classList.add('_active')
-// }
-
 // ====================
 let body = document.querySelector('.wrapper');
   window.onscroll = onScroll;
   function onScroll() {
     var top = window.pageYOffset;
-    if (top < 60) {
+    if (top < 0) {
       body.classList.remove('hide');
     } else {
       body.classList.add('hide');

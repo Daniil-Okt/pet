@@ -8,8 +8,8 @@ h1 {
 
 h2 {
     font-weight: 700;
-    @include adaptiveClamp(font-size, 36, 20);
-    @include adaptiveClamp(line-height, 44, 28);
+    @include adaptiveClamp(font-size, 36, 21);
+    @include adaptiveClamp(line-height, 44, 30);
 }
 
 h3 {
