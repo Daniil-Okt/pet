@@ -1,13 +1,154 @@
 .footer {
-  padding: rem(20) 0;
-  background: $blackColor;
+  padding: rem(40) 0 rem(54);
+  background: $colorBlue;
   // .footer__container
   &__container {
+    // display: flex;
+    // align-items: center;
+    // @include media(510) {
+    //   flex-direction: column;
+    //   align-items: flex-start;
+    // }
+  }
+
+  &__container {
+  }
+
+  &__row {
     display: flex;
-    align-items: center;
-    @include media(510) {
-      flex-direction: column;
-      align-items: flex-start;
+    justify-content: space-between;
+    gap: rem(20);
+    row-gap: rem(40);
+    @media(max-width:1050px){
+        flex-wrap: wrap;
     }
   }
+
+  &__item {
+    flex: 0 1 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    &:last-child {
+      align-items: end;
+      justify-content: end;
+      flex: 0 1 15%;
+    }
+    &:first-child {
+      flex: 0 1 35%;
+    }
+    @media(max-width:1050px){
+      flex: 0 1 30%;
+      &:last-child {
+        flex: 0 1 100%;
+      }
+    }
+    @media(max-width:830px){
+        flex: 0 1 100%;
+        &:first-child { 
+          flex: 0 1 100%;
+        }
+    }
+  }
+
+  &__logo {
+    @include adaptiveClamp(max-width, 302, 200);
+    img {
+      width: 100%;
+    }
+  }
+
+  &__email {
+    color: $whiteColor;
+    margin-top: rem(24);
+
+    &::before {
+      position: absolute;
+      content: '';
+      height: rem(17.5);
+      width: rem(23.5);
+      background: url(@img/footer-mail-icon.svg) no-repeat center center / contain;
+      top: 0;
+      left: 0;
+    } 
+  }
+
+  &__number {
+    @include adaptiveClamp(margin-top, 46, 20);
+
+    color: $whiteColor;
+    &::before {
+      position: absolute;
+      content: '';
+      height: rem(24);
+      width: rem(15.43);
+      background: url(@img/footer-tel-icon.svg) no-repeat center center / contain;
+      bottom: rem(4);
+      left: 0;
+      @media(max-width:960px){
+        bottom: rem(0);
+      }
+    } 
+  }
+
+  &__button-row {
+    margin-top: rem(15);
+    padding-left: rem(40);
+    justify-content: start;
+  }
+
+  &__button {
+    color: $whiteColor;
+
+  }
+  &__title {
+    font-weight: 600;
+    margin-bottom: rem(20);
+    color: $whiteColor;
+    text-transform: uppercase;
+
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: rem(10);
+  }
+
+  &__list-item {
+    span {
+      padding: 0 rem(5);
+      color: $whiteColor;
+
+    }
+    a {
+      color: $whiteColor;
+    }
+  }
+
+  &__btn-top-row {
+  }
+
+  &__btn-top {
+  }
 }
+.logo {
+}
+.info-header {
+
+  &__email {
+  }
+
+  &__row {
+  }
+
+  &__number {
+    
+  }
+
+  &__button-row {
+  }
+
+  &__button {
+  }
+}
+
